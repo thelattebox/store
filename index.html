@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Latte Box Colombia - Próximamente</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #4A2C2A; /* Un tono café oscuro, elegante */
+            --secondary-color: #E2DCCF; /* Un crema suave, tipo latte */
+            --text-color: #333;
+            --light-text-color: #666;
+            --background-color: #F8F8F8; /* Casi blanco */
+            --accent-color: #A36B5E; /* Un tono más rojizo para acento, como café tostado */
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--background-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            color: var(--text-color);
+            text-align: center;
+            overflow: hidden; /* Para asegurar que las partículas no causen scroll */
+            position: relative;
+        }
+
+        .container {
+            background-color: #ffffff;
+            padding: 40px 60px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            max-width: 600px;
+            width: 90%;
+            position: relative;
+            z-index: 10; /* Asegura que el contenido esté sobre las partículas */
+        }
+
+        .logo {
+            margin-bottom: 30px;
+        }
+
+        .logo img {
+            max-width: 180px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            border-radius: 8px; /* Si tu logo tiene fondo, suaviza los bordes */
+        }
+
+        h1 {
+            font-size: 3.2em;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        p {
+            font-size: 1.2em;
+            color: var(--light-text-color);
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        .countdown {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+
+        .countdown div {
+            background-color: var(--secondary-color);
+            padding: 15px 20px;
+            border-radius: 8px;
+            min-width: 80px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .countdown span {
+            display: block;
+            font-size: 2.2em;
+            font-weight: 700;
+            color: var(--accent-color);
+            margin-bottom: 5px;
+        }
+
+        .countdown small {
+            font-size: 0.9em;
+            color: var(--primary-color);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .social-links {
+            margin-top: 30px;
+        }
+
+        .social-links a {
+            color: var(--primary-color);
+            font-size: 1.8em;
+            margin: 0 12px;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: var(--accent-color);
+        }
+
+        .contact-info {
+            margin-top: 30px;
+            font-size: 1em;
+            color: var(--light-text-color);
+        }
+
+        .contact-info a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        /* Particles/Bubbles Effect */
+        .particle {
+            position: absolute;
+            background-color: rgba(226, 220, 207, 0.6); /* Color latte con transparencia */
+            border-radius: 50%;
+            animation: float 20s infinite ease-in-out;
+            opacity: 0;
+            pointer-events: none; /* No interfieren con eventos del mouse */
+            z-index: 1; /* Detrás del contenido */
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0) translateX(0); opacity: 0; }
+            50% { opacity: 1; }
+            100% { transform: translateY(-100vh) translateX(50px); opacity: 0; }
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 768px) {
+            .container {
+                padding: 30px 40px;
+            }
+            h1 {
+                font-size: 2.5em;
+            }
+            p {
+                font-size: 1em;
+            }
+            .countdown div {
+                padding: 10px 15px;
+                min-width: 60px;
+            }
+            .countdown span {
+                font-size: 1.8em;
+            }
+            .countdown small {
+                font-size: 0.8em;
+            }
+            .social-links a {
+                font-size: 1.5em;
+                margin: 0 8px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 20px 25px;
+            }
+            h1 {
+                font-size: 2em;
+            }
+            p {
+                font-size: 0.9em;
+            }
+            .countdown {
+                gap: 15px;
+            }
+            .countdown div {
+                padding: 8px 10px;
+                min-width: 50px;
+            }
+            .countdown span {
+                font-size: 1.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="logo">
+            <img src="https://via.placeholder.com/180x80/4A2C2A/E2DCCF?text=The+Latte+Box" alt="The Latte Box Colombia Logo">
+        </div>
+
+        <h1>¡Estamos preparando algo delicioso!</h1>
+        <p>The Latte Box Colombia está en construcción. Muy pronto podrás disfrutar de una experiencia única con el mejor café y ambiente.</p>
+
+        <div class="countdown">
+            <div>
+                <span id="days">00</span>
+                <small>Días</small>
+            </div>
+            <div>
+                <span id="hours">00</span>
+                <small>Horas</small>
+            </div>
+            <div>
+                <span id="minutes">00</span>
+                <small>Minutos</small>
+            </div>
+            <div>
+                <span id="seconds">00</span>
+                <small>Segundos</small>
+            </div>
+        </div>
+
+        <p>Síguenos en nuestras redes sociales para ser el primero en saber cuándo abrimos:</p>
+        <div class="social-links">
+            <a href="https://www.instagram.com/thelatteboxcolombia" target="_blank" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.facebook.com/thelatteboxcolombia" target="_blank" aria-label="Facebook">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            </div>
+
+        <div class="contact-info">
+            ¿Preguntas? Contáctanos: <a href="mailto:info@thelatteboxcolombia.com">info@thelatteboxcolombia.com</a>
+        </div>
+    </div>
+
+    <script>
+        // Script de Cuenta Regresiva (si la usas)
+        const countdownDate = new Date("October 27, 2025 09:00:00").getTime(); // Cambia esta fecha a tu fecha de lanzamiento
+
+        const x = setInterval(function() {
+            const now = new Date().getTime();
+            const distance = countdownDate - now;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("days").innerHTML = days < 10 ? "0" + days : days;
+            document.getElementById("hours").innerHTML = hours < 10 ? "0" + hours : hours;
+            document.getElementById("minutes").innerHTML = minutes < 10 ? "0" + minutes : minutes;
+            document.getElementById("seconds").innerHTML = seconds < 10 ? "0" + seconds : seconds;
+
+            if (distance < 0) {
+                clearInterval(x);
+                document.querySelector(".countdown").innerHTML = "<h3>¡Ya estamos abiertos!</h3>";
+            }
+        }, 1000);
+
+        // Script para generar partículas
+        function createParticle() {
+            const particle = document.createElement('div');
+            particle.classList.add('particle');
+            document.body.appendChild(particle);
+
+            const size = Math.random() * 20 + 10; // Tamaño entre 10px y 30px
+            particle.style.width = `${size}px`;
+            particle.style.height = `${size}px`;
+            particle.style.left = `${Math.random() * 100}vw`; // Posición aleatoria en el ancho
+            particle.style.bottom = `-${size}px`; // Empieza desde abajo
+
+            const animationDuration = Math.random() * 10 + 15; // Duración entre 15s y 25s
+            particle.style.animationDuration = `${animationDuration}s`;
+            particle.style.animationDelay = `-${Math.random() * animationDuration}s`; // Para que no empiecen todas a la vez
+
+            // Eliminar la partícula después de que termine la animación
+            particle.addEventListener('animationend', () => {
+                particle.remove();
+            });
+        }
+
+        // Generar partículas a intervalos regulares
+        setInterval(createParticle, 500); // Crea una nueva partícula cada 500ms
+        // Genera algunas iniciales
+        for (let i = 0; i < 20; i++) {
+            createParticle();
+        }
+    </script>
+    <script src="https://kit.fontawesome.com/your-font-awesome-kit-code.js" crossorigin="anonymous"></script>
+    </body>
+</html>
