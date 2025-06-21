@@ -41,10 +41,18 @@
             z-index: 10; /* Asegura que el contenido esté sobre las partículas */
         }
 
-        .logo {
-            margin-bottom: 30px;
+       .logo {
+        margin-bottom: 30px;
         }
-
+    
+        .logo h1 {
+            color: var(--primary-color);
+            font-size: 2.5em; /* Ajusta el tamaño según lo necesites */
+            font-weight: 700;
+            letter-spacing: -1px; /* Ajusta el espaciado entre letras si es necesario */
+            margin: 0;
+        }
+        
         .logo img {
             max-width: 180px;
             height: auto;
@@ -203,7 +211,7 @@
     <div class="container">
         <h1 class="logo-temp">The Latte Box</h1>
 
-        <h1>¡Estamos preparando algo delicioso!</h1>
+        <div class="logo"> <h1>The Latte Box</h1> <h1>COLOMBIA</h1> </div>
         <p>The Latte Box Colombia está en construcción. Muy pronto podrás disfrutar de una experiencia única con el mejor café y ambiente.</p>
 
         <div class="countdown">
